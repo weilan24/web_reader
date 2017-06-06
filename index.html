@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html ng-app="app">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no,minimal-ui">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" href="css/reset.css">
+		<link rel="stylesheet" href="css/main.css">
+	</head>
+	<body>
+		<div id="root" class="container">
+			<!-- 响应文章区域的样式 -->
+			<div class="m-artical-action">
+				<div class="artical-acition-mid" id="action_mid"></div>
+			</div>
+			<div id="top-nav" class="top-nav" style="display:none">
+				<div class="icon-back"></div>
+				<div class="nav-title">返回书架</div>
+			</div>
+			<div id="fition_chapter_title"></div>
+			<div id="fiction_container" class="m-read-content">
+				<h4>第一章 韩述的镜子</h4>
+				<p>　韩述的理想境界是：一个清闲的早上，在自己家的大床上睡到自然醒，起来活动一下筋骨，喝一杯自己泡的柠檬茶，搭配着楼下街道拐角处老牌西饼店里的蜂巢蛋糕，这就是完美的早餐，一边吃，一边还可以看看新闻。音乐可有可无，但播放器里必然有他最喜欢的一直曲子在等待着。出门的时候，换一身自己最喜欢的半旧休闲衫裤，去赴一场有点期待又不至于太过激动的约会。打开门，发现天气不晴也不雨，不冷也不热，天高云淡，空气清新，最好有一点点风。各种工作上生活上的问题通通圆满地告一段落，晚上回来还可以做自己想做的事情，明天也不用着急着上班……</p>
+				<p>此刻，他站在G市商业区时代广场的花坛附近，一切很完美，虽然不一定完全达到他的理想境界，但是也相去不远，除了天气，除了他喜欢的球队赢得了比赛，还有太多的理由让他心情大好。昨天，也就是星期五，他的案子在法庭上胜诉，以奸猾出名的被告人终于伏法，就连检察长都说他确实赢得漂亮，他在城南区人民检察院十年来胜诉率最高的纪录得以维持，可以说是给他在城南区的工作经历画上了一个圆满的句号，因为据可靠消息，他升迁的调令已经正式到了市院，事业更上一层楼已是板上钉钉的事情。</p>
+				<p>昨天晚上，韩述的几个同事朋友为他庆祝，四个人喝了四瓶伏特加，早上醒来居然没有感觉到头痛，天气如他希望般的好，找不出什么可以挑剔的，就连把车停到广场的地下停车场时，也正好赶上了一个最佳的车位。所以，女朋友虽然已经迟到了二十五分钟，但这也并不足以让他的好心情打折扣。</p>
+				<p>身边走过四五个大学生模样的年轻女孩子，叽叽喳喳地笑闹着，眼睛不住地朝他张望。韩述抬起头，回应了她们一个笑脸，结果那几个小女生反倒不好意思地红了脸，你推我搡地跑开了。他轻轻哼着只有自己听得到的歌，单手插在裤子口袋里，另一只手漫不经心地摘着花坛里杜鹃开败了的花朵，这花谢了之后不容易自然脱落，枯萎成一团还留在枝头上，既占用了植株的养分，也有碍它的观赏价值。</p>
+				<p>　就在摘到第十七朵的时候，肩膀上忽然一阵剧痛传来，韩述的好心情就像一面镜子，在这重重一击下出现了第一道裂痕。</p>
+				<p>韩述深呼吸几下，回过头，果然看到了那张熟悉的笑脸。他本来想说，“我更喜欢说一声‘Hi’这种打招呼的方式,而不是铁砂掌。”但是想了想，还是算了，便笑了笑说道：“你总算是来了，不知道是谁在电话里说的，到得晚的人要请吃饭。”</p>
+				<p>朱小北豪气干云地踮起脚，单手勾住韩述的肩膀说道：“请吃饭算什么，咱哥俩谁跟谁啊？不好意思了，出门换衣服的时候耽误了时间，等久了吧？”</p>
+			</div>
+			<div class="m-button-bar">
+				<ul class="u-tab">
+					<li id="prev_button">上一章</li>
+					<li id="next_button">下一章</li>
+				</ul>
+			</div>
+			<div class="nav-pannel-bk font-container"  style="display:none"></div>
+			<div class="nav-pannel font-container" id="font-container"  style="display:none">
+				<div class="child-mod">
+					<span>字号</span>
+					<button id="large-font" class="font-size-button">大</button>
+					<button id="small-font" class="font-size-button">小</button>
+				</div>
+				<div class="child-mod">
+					<span>背景</span>
+					<div class="bk-container">
+						<div class="bk-container-current" id="bk1"></div>
+					</div>
+					<div class="bk-container">
+						<div class="bk-container-current" id="bk2"></div>
+					</div>
+					<div class="bk-container">
+						<div class="bk-container-current" id="bk3"></div>
+					</div>
+					<div class="bk-container">
+						<div class="bk-container-current" id="bk4"></div>
+					</div>
+				</div>
+			</div>
+			<div class="bottom-nav-bk" id="bottom-nav-bk" style="display:none"></div>
+			<div class="bottom-nav" id="bottom-nav" style="display:none">
+				<div class="item" >
+					<div class="item-warp">
+						<div class="icon-menu"></div>
+						<div class="icon-text">
+							目录
+						</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="item-warp"  id="font-button">
+						<div class="icon-ft"></div>
+						<div class="icon-text">
+							字体
+						</div>
+					</div>
+				</div>
+				<div class="item" id="day-night-changed">
+					<div class="item-warp" id="day-button" style="display:none">
+						<div class="icon-day"></div>
+						<div class="icon-text">
+							白天
+						</div>
+					</div>
+					<div class="item-warp" id="night-button">
+						<div class="icon-night"></div>
+						<div class="icon-text">
+							夜间
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="lib/zepto.min.js"></script>
+		
+		<script src="js/main.js"></script>
+		
+
+		<script>
+			
+		</script>
+	</body>
+</html>
